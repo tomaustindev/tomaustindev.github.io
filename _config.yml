@@ -27,7 +27,7 @@ url: "https://tomaustindev.github.io" # the base hostname & protocol for your si
 github_username:  tomaustindev
 
 # Build settings
-theme: jekyll-theme-so-simple
+remote_theme: jekyll-theme-so-simple
 plugins:
   - jekyll-feed
 
