@@ -1,0 +1,52 @@
+Getting Started
+===============
+
+This project is split into two halves.
+
+- Core Flask app (ollert), which uses Supabase to store and retrieve workload data.
+- Lightweight testing CLI ``ollert_test``, which may be used to simulate test requests to the server.
+
+Installation
+------------
+1. Clone this repository into a suitable location using:
+
+.. code-block:: console
+
+  git clone https://github.com/tomaustindev/ollert.git
+
+2. Run the following in a terminal in the root ``ollert/`` directory:
+
+.. code-block:: console
+
+  pip install ./
+
+.. note::
+
+  This will ensure that the testing CLI is installed.
+  This also ensures that the packages required by the core Flask app are installed.
+
+3. Connect to the Supabase project by providing the necessary environment variables.
+
+.. code-block:: console
+
+  export SB_URL="YOUR PROJECT URL GOES HERE"
+  export SB_KEY="YOUR PUBLISHABLE KEY GOES HERE"
+
+.. warning::
+
+  It is imperative that these environment variables are present before starting the core Flask app.
+  If they are missing then the app will fail immediately.
+  To check whether they have been successfully set, run the following:
+
+  .. code-block:: console
+
+    echo $SB_URL
+    echo $SB_KEY
+
+Running
+-------
+1. Start the Flask server from within the root ``ollert/`` directory by running ``run.bat`` (Windows) or ``run.sh`` (UNIX-Based).
+
+2. Once running, one may perform frontend tests in a separate terminal.
+   Run the command ``ollert_test``, which will start the testing CLI.
+

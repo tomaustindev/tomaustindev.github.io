@@ -1,0 +1,220 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>route.auth module &mdash; ollert 1.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="canonical" href="https://tomaustindev.github.io/ollert/route.auth.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=292eb321"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="route.me module" href="route.me.html" />
+    <link rel="prev" title="route package" href="route.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ollert
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="manual/guide.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="manual/guide.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual/guide.html#running">Running</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="manual/arch.html">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="manual/arch.html#routes">Routes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="manual/arch.html#auth-login">/auth/login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manual/arch.html#auth-logout">/auth/logout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manual/arch.html#auth-register">/auth/register</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manual/arch.html#me">/me</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manual/arch.html#status-codes">Status Codes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="manual/arch.html#success">[200] SUCCESS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manual/arch.html#bad-request">[400] BAD_REQUEST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manual/arch.html#bad-auth">[401] BAD_AUTH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manual/arch.html#missing-perms">[403] MISSING_PERMS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Packages &amp; Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="app.html">app module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="app.html#app.create_app"><code class="docutils literal notranslate"><span class="pre">create_app()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">data package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data.html#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data.auth.html">data.auth module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data.me.html">data.me module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data.html#module-data">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data.html#data.create_sb_client"><code class="docutils literal notranslate"><span class="pre">create_sb_client()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="route.html">route package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="route.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">route.auth module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="route.me.html">route.me module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="route.request.html">route.request module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="route.html#module-route">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="route.html#route.route_app"><code class="docutils literal notranslate"><span class="pre">route_app()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="status.html">status module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="status.html#status.Status"><code class="docutils literal notranslate"><span class="pre">Status</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="status.html#status.auth_header_err"><code class="docutils literal notranslate"><span class="pre">auth_header_err()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="status.html#status.error"><code class="docutils literal notranslate"><span class="pre">error()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="status.html#status.miss_field_err"><code class="docutils literal notranslate"><span class="pre">miss_field_err()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="status.html#status.success"><code class="docutils literal notranslate"><span class="pre">success()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ollert</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Packages &amp; Modules</a></li>
+          <li class="breadcrumb-item"><a href="route.html">route package</a></li>
+      <li class="breadcrumb-item active">route.auth module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/route.auth.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-route.auth">
+<span id="route-auth-module"></span><h1>route.auth module</h1>
+<p>Route.Auth module is in charge of routing user authentication processes.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="route.auth.login">
+<span class="sig-prename descclassname"><span class="pre">route.auth.</span></span><span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="status.html#status.Status" title="status.Status"><span class="pre">Status</span></a></span></span></dt>
+<dd><p>Reads “email” and “password” from JSON request and attempts to login to Supabase with these credentials using <a class="reference internal" href="data.auth.html#data.auth.sb_login" title="data.auth.sb_login"><code class="xref py py-meth docutils literal notranslate"><span class="pre">data.auth.sb_login()</span></code></a>. Called when accessing “/auth/login”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>Success: Access and refresh tokens that the user can store.</p></li>
+<li><p>Failure: <a class="reference internal" href="manual/arch.html#stat-bad-auth"><span class="std std-ref">[401] BAD_AUTH</span></a> error code.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="route.auth.logout">
+<span class="sig-prename descclassname"><span class="pre">route.auth.</span></span><span class="sig-name descname"><span class="pre">logout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="status.html#status.Status" title="status.Status"><span class="pre">Status</span></a></span></span></dt>
+<dd><p>Reads access token from JSON request header and attempts to logout the associated user using <a class="reference internal" href="data.auth.html#data.auth.sb_logout" title="data.auth.sb_logout"><code class="xref py py-meth docutils literal notranslate"><span class="pre">data.auth.sb_logout()</span></code></a>. Called when accessing “/auth/logout”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>Success: <a class="reference internal" href="manual/arch.html#stat-success"><span class="std std-ref">[200] SUCCESS</span></a> code.</p></li>
+<li><p>Failure: <a class="reference internal" href="manual/arch.html#stat-bad-auth"><span class="std std-ref">[401] BAD_AUTH</span></a> error code.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="route.auth.register">
+<span class="sig-prename descclassname"><span class="pre">route.auth.</span></span><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="status.html#status.Status" title="status.Status"><span class="pre">Status</span></a></span></span></dt>
+<dd><p>Reads “email”, “password”, and “full_name” from JSON request and attempts to register to Supabase with these credentials using <a class="reference internal" href="data.auth.html#data.auth.sb_register" title="data.auth.sb_register"><code class="xref py py-meth docutils literal notranslate"><span class="pre">data.auth.sb_register()</span></code></a>. Called when accessing “/auth/register”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>Success: Access and refresh tokens that the user can store.</p></li>
+<li><p>Failure: <a class="reference internal" href="manual/arch.html#stat-bad-auth"><span class="std std-ref">[401] BAD_AUTH</span></a> error code.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="route.html" class="btn btn-neutral float-left" title="route package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="route.me.html" class="btn btn-neutral float-right" title="route.me module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, tomaustindev.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

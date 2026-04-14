@@ -1,0 +1,20 @@
+route package
+=============
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   route.auth
+   route.me
+   route.request
+
+Module contents
+---------------
+
+.. automodule:: route
+   :members:
+   :show-inheritance:
+   :undoc-members:

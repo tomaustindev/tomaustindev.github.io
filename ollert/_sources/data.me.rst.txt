@@ -1,0 +1,7 @@
+data.me module
+==============
+
+.. automodule:: data.me
+   :members:
+   :show-inheritance:
+   :undoc-members:

@@ -1,0 +1,19 @@
+data package
+============
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   data.auth
+   data.me
+
+Module contents
+---------------
+
+.. automodule:: data
+   :members:
+   :show-inheritance:
+   :undoc-members:

@@ -1,0 +1,7 @@
+data.auth module
+================
+
+.. automodule:: data.auth
+   :members:
+   :show-inheritance:
+   :undoc-members:

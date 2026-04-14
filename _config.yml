@@ -19,18 +19,33 @@
 # in the templates via {{ site.myvariable }}.
 
 title: "tomaustindev"
-email: your-email@example.com
+email: tomaustindev@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Thomas Rhys Austin's professional portfolio.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tomaustindev.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  tomaustindev
+github_username: tomaustindev
 
 # Build settings
 remote_theme: mmistakes/so-simple-theme
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
+
+defaults:
+  - scope:
+    path: "ollert"
+  - values:
+    layout: null
+
+include:
+  - ollert
+  - ollert/_static
+  - ollert/_sources
+  - ollert/_modules
+
+exclude:
+  - ollert/.doctrees
 
 # Exclude from processing.
 # The following items will not be processed, by default.

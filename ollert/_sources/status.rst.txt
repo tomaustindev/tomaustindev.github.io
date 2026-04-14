@@ -1,0 +1,7 @@
+status module
+=============
+
+.. automodule:: status
+   :members:
+   :show-inheritance:
+   :undoc-members:
